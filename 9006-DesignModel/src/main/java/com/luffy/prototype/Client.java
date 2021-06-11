@@ -16,11 +16,14 @@ public class Client {
         Video video = new Video("luffy",date);
         Video clone = (Video)video.clone();
 
-        System.out.println(video.toString());
-        System.out.println(clone.toString());
+        System.out.println(video.toString()+"           "+video.hashCode());
+        System.out.println(clone.toString()+"           "+clone.hashCode());
         date.setTime(26545646);
-        System.out.println(video.toString());
-        System.out.println(clone.toString());
+        System.out.println(video.toString()+"           "+video.hashCode());
+        System.out.println(clone.toString()+"           "+clone.hashCode());
+        clone.setTime(date);
+        System.out.println(video.toString()+"           "+video.hashCode());
+        System.out.println(clone.toString()+"           "+clone.hashCode());
 //        System.out.println("1111111111111111111111");
 //        Video clone = (Video)video.clone();
 //
