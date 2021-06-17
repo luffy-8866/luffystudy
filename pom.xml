@@ -10,8 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>jwt</module>
-        <module>elasticSerach</module>
-        <module>redis</module>
+
+        <module>java</module>
         <module>9006-DesignModel</module>
     </modules>
 
