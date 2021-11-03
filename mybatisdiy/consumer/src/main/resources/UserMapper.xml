@@ -1,0 +1,10 @@
+<mapper namespace="com.luffy.consumer.dao.IUserDao">
+
+    <select id="findAll" resultType="com.luffy.consumer.model.User">
+    select * from user
+    </select>
+    <select id="one" resultType="com.luffy.consumer.model.User" paramerType="com.luffy.consumer.model.User">
+    select * from user where id = #{id}
+</select>
+
+</mapper>

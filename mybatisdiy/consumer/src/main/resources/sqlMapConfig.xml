@@ -1,0 +1,15 @@
+<configuration>
+
+    <dataSource>
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://192.168.42.22:3306/diy"></property>
+        <property name="username" value="luffy"></property>
+        <property name="password" value="luffy"></property>
+    </dataSource>
+
+    <mapper resource="UserMapper.xml"></mapper>
+
+
+
+
+</configuration>
