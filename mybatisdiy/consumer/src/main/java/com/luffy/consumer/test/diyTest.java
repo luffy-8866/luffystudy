@@ -42,4 +42,12 @@ public class diyTest {
             System.out.println(object);
         }
     }
+    @Test
+    public void test2(){
+        String a ="String1,qqqq";
+        String[] strings = {"1", "2", "3"};
+        String[] split = a.split(",");
+        System.out.println(split.toString());
+    }
+
 }
