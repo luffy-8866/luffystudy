@@ -13,6 +13,8 @@
 
         <module>java</module>
         <module>9006-DesignModel</module>
+        <module>mvc</module>
+        <module>springmvc-diy</module>
     </modules>
 
     <name>luffystudy</name>
