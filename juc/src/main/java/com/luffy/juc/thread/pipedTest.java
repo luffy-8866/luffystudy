@@ -1,0 +1,49 @@
+package com.luffy.juc.thread;
+
+import java.io.IOException;
+import java.io.PipedReader;
+import java.io.PipedWriter;
+
+/**
+ * @author luffy
+ * @version 1.0
+ * @desc 线程间管道流通信
+ * @date 2022/1/14 15:27
+ */
+public class pipedTest {
+        public static void main(String[] args) throws Exception {
+            int a= 111;
+            long b = 111L;
+            System.out.println(a == b);
+            PipedWriter out = new PipedWriter();
+            PipedReader in = new PipedReader();
+// 将输出流和输入流进行连接，否则在使用时会抛出IOException
+            out.connect(in);
+            Thread printThread = new Thread(new Print(in), "PrintThread");
+            printThread.start();
+            int receive = 0;
+            try {
+                while ((receive = System.in.read()) != -1) {
+                    out.write(receive);
+                }
+            } finally {
+                out.close();
+            }
+        }
+        static class Print implements Runnable {
+            private PipedReader in;
+            public Print(PipedReader in) {
+                this.in = in;
+            }
+            public void run() {
+                int receive = 0;
+                try {
+                    while ((receive = in.read()) != -1) {
+                        System.out.print((char) receive);
+                    }
+                } catch (IOException ex) {
+                }
+            }
+        }
+
+}

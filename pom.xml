@@ -15,6 +15,7 @@
         <module>9006-DesignModel</module>
         <module>mvc</module>
         <module>springmvc-diy</module>
+        <module>luffy-boot-starter</module>
     </modules>
 
     <name>luffystudy</name>
